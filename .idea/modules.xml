@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/Automatic-scenario-generation.iml" filepath="$PROJECT_DIR$/.idea/Automatic-scenario-generation.iml" />
+      <module fileurl="file://$PROJECT_DIR$/AutomaticScenarioGeneration.iml" filepath="$PROJECT_DIR$/AutomaticScenarioGeneration.iml" />
     </modules>
   </component>
 </project>
