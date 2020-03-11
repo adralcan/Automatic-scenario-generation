@@ -1,6 +1,8 @@
 public class Vertex {
-    String label;
-    Vertex(String label) {
-        this.label = label;
+    Element element;
+    Vertex(Element element) {
+        this.element = element;
     }
+
+    //equals and hashcode
 }
