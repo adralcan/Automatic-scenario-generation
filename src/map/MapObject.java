@@ -7,9 +7,75 @@ public class MapObject {
     private int posX;
     private int posY;
 
-    private enum ObjectName {
-        none("none");
+    public String name() {
+        return name;
+    }
 
+    public String type() {
+        return type;
+    }
+
+    public int getPosX() {
+        return posX;
+    }
+
+    public int getPosY() {
+        return posY;
+    }
+
+    private enum ObjectName {
+        flag("flag"),
+        arbolGrande("arbolGrande"),
+        arbolGrande2("arbolGrande2"),
+        arbolGrande3("arbolGrande3"),
+        arbolGrande4("arbolGrande4"),
+        piedraGrande("piedraGrande"),
+        roca1("roca1"),
+        roca2("roca2"),
+        roca3("roca3"),
+        roca_rompible("roca_rompible"),
+        roquitas("roquitas"),
+        valla1("valla1"),
+        valla2("valla2"),
+        vallaEsquina1("vallaEsquina1"),
+        vallaEsquina2("vallaEsquina2"),
+        vallaEsquina3("vallaEsquina3"),
+        vallaEsquina4("vallaEsquina4"),
+        arbusto("arbusto"),
+        arbustoCuadrado("arbustoCuadrado"),
+        flores("flores"),
+        seta("seta"),
+        setitas("setitas"),
+        tronco("tronco"),
+        tronco_tumbado_right("tronco_tumbado_right"),
+        tronco_tumbado_left("tronco_tumbado_left"),
+        springDownRight("springDownRight"),
+        springDownLeft("springDownLeft"),
+        springUpRight("springUpRight"),
+        springUpLeft("springUpLeft"),
+        teleporPlatform("teleporPlatform teleport"),
+        hielo("hielo"),
+        lupa("lupa"),
+        mazo("mazo"),
+        senal01("senal01"),
+        buttonWoodActivate("buttonActivate wood"),
+        buttonStoneActivate("buttonActivate stone"),
+        puenteIfWoodRight("puenteIf wood right"),
+        puenteIfWoodLeft("puenteIf wood left"),
+        puenteIfStoneRight("puenteIf stone right"),
+        puenteIfStoneLeft("puenteIf stone left"),
+        dummyBridgeWoodRightOn("dummyBridge wood right on"),
+        dummyBridgeWoodRightOff("dummyBridge wood right off"),
+        dummyBridgeWoodLeftOn("dummyBridge wood left on"),
+        dummyBridgeWoodLeftOff("dummyBridge wood left off"),
+        dummyBridgeStoneRightOn("dummyBridge stone right on"),
+        dummyBridgeStoneRightOff("dummyBridge stone right off"),
+        dummyBridgeStoneLeftOn("dummyBridge stone left on"),
+        dummyBridgeStoneLeftOff("dummyBridge stone left off"),
+        entrada_puente_left_top("entrada_puente_left_top"),
+        entrada_puente_left_bottom("entrada_puente_left_bottom"),
+        entrada_puente_right_top("entrada_puente_right_top"),
+        entrada_puente_right_bottom("entrada_puente_right_bottom");
 
         private String text;
 
@@ -39,6 +105,7 @@ public class MapObject {
         pickup("pickup"),
         buttonToggle("buttonToggle"),
         puenteIf("puenteIf"),
+        dummyBridge("dummyBridge"),
         teleport("teleport");
 
         private String text;
@@ -61,10 +128,14 @@ public class MapObject {
         }
     }
 
-    public MapObject(String type, int positionX, int positionY){
+    public MapObject(String name, String type, int positionX, int positionY){
+        this.name = MapObject.ObjectName.fromString(name);
+        if (this.name == null) {
+            throw new IllegalArgumentException("This object name does not exists: " + type);
+        }
         this.type = MapObject.ObjectType.fromString(type);
         if (this.type == null) {
-            throw new IllegalArgumentException("This obejct type does not exists: " + type);
+            throw new IllegalArgumentException("This object type does not exists: " + type);
         }
         this.posX = positionX;
         this.posY = positionY;
