@@ -3,7 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="44cf1b86-1771-4436-a1e6-ecb1a68c0e9b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/map/MapObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/map/MapObject.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/map/Block.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/map/Block.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/map/MapTemplate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/map/MapTemplate.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,6 +24,13 @@
   <component name="Git.Settings">
     <option name="UPDATE_TYPE" value="MERGE" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="hiddenUrls">
+      <set>
+        <option value="https://github.com/adralcan/Automatic-scenario-generation.git" />
+      </set>
+    </option>
   </component>
   <component name="ProjectId" id="1jNKDcWc6VEFlcM96CNNUmxhils" />
   <component name="ProjectViewState">
@@ -79,6 +87,8 @@
       <workItem from="1583947475696" duration="1512000" />
       <workItem from="1603638993378" duration="4700000" />
       <workItem from="1603650584496" duration="2967000" />
+      <workItem from="1604418649786" duration="838000" />
+      <workItem from="1604508218821" duration="2958000" />
     </task>
     <servers />
   </component>
