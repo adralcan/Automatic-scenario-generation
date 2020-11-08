@@ -5,6 +5,7 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/map/Block.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/map/Block.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/map/MapTemplate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/map/MapTemplate.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/map/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/map/Player.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -88,7 +89,8 @@
       <workItem from="1603638993378" duration="4700000" />
       <workItem from="1603650584496" duration="2967000" />
       <workItem from="1604418649786" duration="838000" />
-      <workItem from="1604508218821" duration="2958000" />
+      <workItem from="1604508218821" duration="3160000" />
+      <workItem from="1604853057740" duration="12385000" />
     </task>
     <servers />
   </component>
@@ -140,9 +142,9 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="656" y="252" width="737" height="606" key="find.popup/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1603641574684" />
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1603639421015">
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1604855931770">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1603639421015" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1604855931770" />
   </component>
 </project>

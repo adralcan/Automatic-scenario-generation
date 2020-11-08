@@ -17,11 +17,15 @@ public class Block {
     }
 
     public String getCategory() {
-        return category;*
+        return category;
     }
 
     public int getMax() {
         return max;
+    }
+
+    public void setMax(int newMax) {
+        max = newMax;
     }
 
     private Boolean findBlockInList(String name, List<String> category) {
