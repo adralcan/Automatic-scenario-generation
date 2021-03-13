@@ -1,19 +1,19 @@
 package map;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Map;
-import java.util.Random;
+import javafx.util.Pair;
+
+import java.sql.Struct;
+import java.util.*;
 
 public class MapTemplate {
     private String type;
     private int width;
     private int height;
+    private List<String> solution;
     private Map<String, Block> blocks;
     private List<Tile> tiles;
     private List<MapObject> objects;
     private List<Player> player;
-    private List<String> solution;
 
     // Other attrs from json file that content map info
     // ...
@@ -47,41 +47,74 @@ public class MapTemplate {
     }
 
     private void fillBlocksAndSolution(String[] blocksInitials) {
-        for (int i = 0; i < blocksInitials.length; i++) {
-            switch (blocksInitials[i]) {
+        String block = "";
+        for (String blocksInitial : blocksInitials) {
+            switch (blocksInitial) {
                 case "A":
-                    updateBlockFromBlockMap("advance");
-                    solution.add("advance");
+                    block = "advance";
                     break;
                 case "B":
-                    updateBlockFromBlockMap("backwards");
-                    solution.add("backwards");
+                    block = "backwards";
                     break;
                 case "J":
-                    updateBlockFromBlockMap("jump");
-                    solution.add("jump");
+                    block = "jump";
                     break;
                 case "T":
-                    updateBlockFromBlockMap("turnRight");
-                    solution.add("turnRight");
+                    block = "turnRight";
                     break;
                 case "t":
-                    updateBlockFromBlockMap("turnLeft");
-                    solution.add("turnLeft");
+                    block = "turnLeft";
                     break;
                 case "H":
-                    updateBlockFromBlockMap("action");
-                    solution.add("action");
+                    block = "action";
                     break;
             }
+            updateBlockFromBlockMap(block);
+            solution.add(block);
         }
     }
 
-    private void buildTemplate(){
+    private void buildTemplate() {
         Random rnd = new Random();
-        int x = rnd.nextInt(width);
-        int y = rnd.nextInt(height);
-        Player realPlayer = new Player(Player.randomLookPosition(), x, y);
-        // TODO: Construir la posicion de la bandera a partir de la solucion proporcionada
+        int coordsX[] = new int[4];
+        int coordsY[] = new int[4];
+        Arrays.fill(coordsX, rnd.nextInt(width));
+        Arrays.fill(coordsY, rnd.nextInt(height));
+        Player lookPositions[] = new Player[]{
+                new Player("bottomLeft", coordsX[0], coordsY[0]),
+                new Player("topLeft", coordsX[1], coordsY[1]),
+                new Player("topRight", coordsX[2], coordsY[2]),
+                new Player("bottomRight", coordsX[3], coordsY[3])};
+
+        class TempPositions {
+            int x;
+            int y;
+            public TempPositions(int x, int y) {
+                x = x;
+                y = y;
+            }
+        };
+        TempPositions tempPositions [] = new TempPositions[]{
+            new TempPositions(coordsX[0], coordsY[0]),
+            new TempPositions(coordsX[1], coordsY[1]),
+            new TempPositions(coordsX[2], coordsY[2]),
+            new TempPositions(coordsX[3], coordsY[3])};
+
+        for (String solutionPart : solution) {
+            switch (solutionPart) {
+                case "advance":
+                    break;
+                case "backwards":
+                    break;
+                case "jump":
+                    break;
+                case "turnRight":
+                    break;
+                case "turnLeft":
+                    break;
+                case "action":
+                    break;
+            }
+        }
     }
 }
