@@ -6,6 +6,7 @@ public class MapObject {
     private String type;
     private int posX;
     private int posY;
+    private int itemNumber = 0;
 
     public String name() {
         return name;
@@ -129,13 +130,19 @@ public class MapObject {
     }
 
     public MapObject(String name, String type, int positionX, int positionY){
-        this.name = MapObject.ObjectName.fromString(name);
-        if (this.name == null) {
-            throw new IllegalArgumentException("This object name does not exists: " + type);
+        try {
+            this.name = MapObject.ObjectName.fromString(name);
+            this.name += Integer.toString(itemNumber);
+            itemNumber++;
         }
-        this.type = MapObject.ObjectType.fromString(type);
-        if (this.type == null) {
-            throw new IllegalArgumentException("This object type does not exists: " + type);
+        catch (IllegalArgumentException e) {
+            throw new IllegalArgumentException("This object NAME does not exists: " + type);
+        }
+        try {
+            this.type = MapObject.ObjectType.fromString(type);
+        }
+        catch (IllegalArgumentException e) {
+            throw new IllegalArgumentException("This object TYPE does not exists: " + type);
         }
         this.posX = positionX;
         this.posY = positionY;
