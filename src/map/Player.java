@@ -132,14 +132,15 @@ public class Player {
                 return false;
             case "advance":
             case "backwards":
+                // TODO: Cuidado con trampolines y teletransportes
                 moveForwardBackward(solutionPart);
                 if (posX < tiles[0].length && posY >= 0 && posY < tiles.length) {
-                    if (offset == tiles[posY][posX].offset())
-                        return true;
-                    else {
+                    if (offset != tiles[posY][posX].offset() && tiles[posY][posX].name().startsWith("water")) {
                         posX = prevX;
                         posY = prevY;
                         return false;
+                    } else {
+                        return true;
                     }
                 }
                 posX = prevX;
@@ -148,14 +149,15 @@ public class Player {
             case "jump":
                 moveForwardBackward(solutionPart);
                 if (posX < tiles[0].length && posY >= 0 && posY < tiles.length) {
-                    if (offset > tiles[posY][posX].offset())
-                        return true;
-                    else if (offset < tiles[posY][posX].offset()) {
-                        return tiles[posY][posX].offset() - offset <= 30;
-                    } else {
+                    if (offset == tiles[posY][posX].offset() || tiles[posY][posX].name().startsWith("water") ||
+                            offset > tiles[posY][posX].offset() + 25) {
                         posX = prevX;
                         posY = prevY;
                         return false;
+                    }
+                    else {
+                        offset = tiles[posY][posX].offset();
+                        return true;
                     }
                 }
                 posX = prevX;

@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="44cf1b86-1771-4436-a1e6-ecb1a68c0e9b" name="Default Changelist" comment="">
+    <list default="true" id="44cf1b86-1771-4436-a1e6-ecb1a68c0e9b" name="Default Changelist" comment="Player - Simulando los movimientos para construir el mapa. Trabajando en &quot;action y jump&quot;">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/map/MapObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/map/MapObject.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/map/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/map/Player.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -98,7 +97,8 @@
       <workItem from="1616257840336" duration="7177000" />
       <workItem from="1617212762842" duration="2036000" />
       <workItem from="1617296234398" duration="2547000" />
-      <workItem from="1617464041823" duration="3901000" />
+      <workItem from="1617464041823" duration="3920000" />
+      <workItem from="1617901555068" duration="3060000" />
     </task>
     <task id="LOCAL-00001" summary="MapTemplate - creando las parcelas según la dirección del personaje">
       <created>1615658543973</created>
@@ -114,7 +114,14 @@
       <option name="project" value="LOCAL" />
       <updated>1616266297645</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Player - Simulando los movimientos para construir el mapa. Trabajando en &quot;action y jump&quot;">
+      <created>1617472545179</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1617472545179</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -136,17 +143,18 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="MapTemplate - creando las parcelas según la dirección del personaje" />
     <MESSAGE value="Player - Simulando los movimientos para construir el mapa. Trabajando en &quot;action&quot;" />
-    <option name="LAST_COMMIT_MESSAGE" value="Player - Simulando los movimientos para construir el mapa. Trabajando en &quot;action&quot;" />
+    <MESSAGE value="Player - Simulando los movimientos para construir el mapa. Trabajando en &quot;action y jump&quot;" />
+    <option name="LAST_COMMIT_MESSAGE" value="Player - Simulando los movimientos para construir el mapa. Trabajando en &quot;action y jump&quot;" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="978" y="137" key="CommitChangelistDialog2" timestamp="1616266297192">
+    <state x="930" y="137" key="CommitChangelistDialog2" timestamp="1617902298164">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="978" y="137" key="CommitChangelistDialog2/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1616266297192" />
-    <state x="1032" y="276" key="Vcs.Push.Dialog.v2" timestamp="1616266301207">
+    <state x="930" y="137" key="CommitChangelistDialog2/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1617902298164" />
+    <state x="1032" y="276" key="Vcs.Push.Dialog.v2" timestamp="1617472546932">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="1032" y="276" key="Vcs.Push.Dialog.v2/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1616266301207" />
+    <state x="1032" y="276" key="Vcs.Push.Dialog.v2/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1617472546932" />
     <state x="1249" y="460" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1615658504534">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
