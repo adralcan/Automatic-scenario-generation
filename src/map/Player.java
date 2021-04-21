@@ -1,6 +1,5 @@
 package map;
 
-import java.awt.dnd.InvalidDnDOperationException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
@@ -8,6 +7,7 @@ import java.util.Random;
 public class Player {
     private final String character = "character";
     private String lookPosition;
+    private String[] lookPositions = {"topLeft", "topRight", "bottomRight", "bottomLeft"};
     private int posX;
     private int posY;
     private int offset;
@@ -50,18 +50,16 @@ public class Player {
             }
             return null;
         }
-        public static String turnLeft(String text) {
+        public static String turn(String turnDirection, String lookPosition) {
+            String nextLookPosition;
             for (LookOptions b : LookOptions.values()) {
-                if (b.turnLeftNext.equalsIgnoreCase(text)) {
-                    return b.turnLeftNext;
+                if (turnDirection.equals("turnRight")) {
+                    nextLookPosition = b.turnRightNext;
+                } else {
+                    nextLookPosition = b.turnLeftNext;
                 }
-            }
-            return null;
-        }
-        public static String turnRight(String text) {
-            for (LookOptions b : LookOptions.values()) {
-                if (b.turnRightNext.equalsIgnoreCase(text)) {
-                    return b.turnRightNext;
+                if(nextLookPosition.equalsIgnoreCase(lookPosition)){
+                    return nextLookPosition;
                 }
             }
             return null;
@@ -79,31 +77,12 @@ public class Player {
         backpack = new ArrayList<>();
     }
 
-    public static String randomLookPosition() {
+    public String randomLookPosition() {
         Random rnd = new Random();
-        int direction = rnd.nextInt(4);
-        String solution = "";
-        switch (direction) {
-            case 0:
-                return solution = "topLeft";
-            case 1:
-                return solution = "topRight";
-            case 2:
-                return solution = "bottomLeft";
-            case 3:
-                return solution = "bottomRight";
-        }
-        return solution;
+        return lookPositions[rnd.nextInt(4)];
     }
     public void turnLookPosition(String turn) {
-        switch (turn) {
-            case "turnLeft":
-                this.lookPosition = LookOptions.turnLeft(lookPosition);
-                break;
-            case "turnRight":
-                this.lookPosition = LookOptions.turnRight(lookPosition);
-                break;
-        }
+        this.lookPosition = LookOptions.turn(turn, lookPosition);
     }
 
     private void moveForwardBackward(String movement) {
@@ -121,6 +100,7 @@ public class Player {
                 posY = (movement.equals("advance") || movement.equals("jump")) ? posY + 1 : posY - 1;
                 break;
         }
+
     }
 
     public Boolean CanMoveTo(String solutionPart, Tile[][] tiles, List<MapObject> mapObjectList) {
