@@ -4,15 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="72c6da21-7a6f-4d72-a691-a55e4a61a731" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/mapGenerator/springboot/solutionGenerator/models/SolutionGenerator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/solution/SolutionGenerator.java" beforeDir="false" />
-    </list>
+    <list default="true" id="72c6da21-7a6f-4d72-a691-a55e4a61a731" name="Changes" comment="Planteamiento del algoritmo de generador de soluciones" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -71,7 +63,7 @@
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
-    <property name="settings.editor.selected.configurable" value="File.Encoding" />
+    <property name="settings.editor.selected.configurable" value="settings.github" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -107,22 +99,45 @@
       <workItem from="1645543140375" duration="18139000" />
       <workItem from="1646038373891" duration="3826000" />
       <workItem from="1647450581595" duration="1114000" />
-      <workItem from="1647799562326" duration="7702000" />
+      <workItem from="1647799562326" duration="8575000" />
     </task>
+    <task id="LOCAL-00001" summary="Planteamiento del algoritmo de generador de soluciones">
+      <created>1647808319386</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1647808319386</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Planteamiento del algoritmo de generador de soluciones">
+      <created>1647808350350</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1647808350350</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Planteamiento del algoritmo de generador de soluciones" />
+    <option name="LAST_COMMIT_MESSAGE" value="Planteamiento del algoritmo de generador de soluciones" />
+  </component>
   <component name="WindowStateProjectService">
-    <state x="527" y="134" key="CommitChangelistDialog2" timestamp="1647808318891">
+    <state x="527" y="134" key="CommitChangelistDialog2" timestamp="1647808349965">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="527" y="134" key="CommitChangelistDialog2/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1647808318891" />
-    <state x="552" y="272" key="Vcs.Push.Dialog.v2" timestamp="1647808326500">
+    <state x="527" y="134" key="CommitChangelistDialog2/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1647808349965" />
+    <state x="461" y="182" key="SettingsEditor" timestamp="1647809166913">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="552" y="272" key="Vcs.Push.Dialog.v2/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1647808326500" />
+    <state x="461" y="182" key="SettingsEditor/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1647809166913" />
+    <state x="552" y="272" key="Vcs.Push.Dialog.v2" timestamp="1647808352040">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="552" y="272" key="Vcs.Push.Dialog.v2/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1647808352040" />
     <state x="769" y="456" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1647808285497">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
