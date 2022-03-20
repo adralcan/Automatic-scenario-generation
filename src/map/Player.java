@@ -103,7 +103,7 @@ public class Player {
 
     }
 
-    public Boolean CanMoveTo(String solutionPart, Tile[][] tiles, List<MapObject> mapObjectList) {
+    public Boolean CanMoveTo(String solutionPart, List<MapObject> mapObjectList) {
         Boolean canMove = true;
         int prevX = posX;
         int prevY = posY;

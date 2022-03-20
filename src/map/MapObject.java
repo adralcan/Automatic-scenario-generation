@@ -1,27 +1,10 @@
 package map;
 
 public class MapObject {
-    private String id;
     private String name;
-    private String type;
-    private int posX;
-    private int posY;
-    private int itemNumber = 0;
 
     public String name() {
         return name;
-    }
-
-    public String type() {
-        return type;
-    }
-
-    public int getPosX() {
-        return posX;
-    }
-
-    public int getPosY() {
-        return posY;
     }
 
     private enum ObjectName {
@@ -132,19 +115,12 @@ public class MapObject {
     public MapObject(String name, String type, int positionX, int positionY){
         try {
             this.name = MapObject.ObjectName.fromString(name);
+            int itemNumber = 0;
             this.name += Integer.toString(itemNumber);
             itemNumber++;
         }
         catch (IllegalArgumentException e) {
             throw new IllegalArgumentException("This object NAME does not exists: " + type);
         }
-        try {
-            this.type = MapObject.ObjectType.fromString(type);
-        }
-        catch (IllegalArgumentException e) {
-            throw new IllegalArgumentException("This object TYPE does not exists: " + type);
-        }
-        this.posX = positionX;
-        this.posY = positionY;
     }
 }

@@ -11,7 +11,6 @@ public class MapTemplate {
     private int height;
     private List<String> solution;
     private Map<String, Block> blocks;
-    private Tile[][] tiles;
     private List<MapObject> objects;
     private List<Player> player;
 
@@ -22,12 +21,6 @@ public class MapTemplate {
         this.type = type;
         width = w;
         height = h;
-        tiles = new Tile[height][width];
-        for (int y = 0; y < height; y++) {
-            for (int x = 0; x < width; x++) {
-                tiles[y][x] = new Tile("grass01", 0, x, y);
-            }
-        }
         if (solution != null)
             fillBlocksAndSolution(solution.split(""));
 
