@@ -1,311 +1,94 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="44cf1b86-1771-4436-a1e6-ecb1a68c0e9b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/solution/SolutionGenerator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/map/Block.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/map/Block.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/map/MapObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/map/MapObject.java" afterDir="false" />
-    </list>
+    <list default="true" id="72c6da21-7a6f-4d72-a691-a55e4a61a731" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="FavoritesManager">
-    <favorites_list name="Automatic-scenario-generation" />
-  </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Interface" />
         <option value="Class" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
-  <component name="Git.Settings">
-    <option name="UPDATE_TYPE" value="REBASE" />
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-  </component>
-  <component name="GithubPullRequestsUISettings">
-    <option name="hiddenUrls">
-      <set>
-        <option value="https://github.com/adralcan/Automatic-scenario-generation.git" />
-      </set>
-    </option>
-  </component>
-  <component name="IdeDocumentHistory">
-    <option name="CHANGED_PATHS">
-      <list>
-        <option value="$PROJECT_DIR$/src/map/Tile.java" />
-        <option value="$PROJECT_DIR$/src/map/Cell.java" />
-      </list>
-    </option>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="-8" />
-    <option name="width" value="977" />
-    <option name="height" value="1088" />
-  </component>
-  <component name="ProjectId" id="1jNKDcWc6VEFlcM96CNNUmxhils" />
-  <component name="ProjectView">
-    <navigator proportions="" version="1">
-      <foldersAlwaysOnTop value="true" />
-    </navigator>
-    <panes />
-  </component>
+  <component name="ProjectId" id="25TFONOQkEhHMUoRbbF3SH8xZOi" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1637485800604" />
-    <property name="com.google.cloudcode.ide_session_index" value="20220320_0001" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../smartickCoding" />
-    <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+    <property name="com.google.cloudcode.ide_session_index" value="20220316_0000" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="settings.editor.selected.configurable" value="File.Encoding" />
   </component>
   <component name="RecentsManager">
-    <key name="CreateClassDialog.RecentsKey">
-      <recent name="map" />
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Adrian\IdeaProjects\spring-boot-di\src\main\resources" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.bolsaideas.springboot.di.app.models.service" />
     </key>
   </component>
   <component name="RunManager">
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true">
-      <option name="MAIN_CLASS_NAME" value="Main" />
-      <module name="AutomaticScenarioGeneration" />
-      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
-      <RunnerSettings RunnerId="Run" />
-      <ConfigurationWrapper RunnerId="Run" />
+    <configuration name="SpringBootDiApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="spring-boot-di" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.bolsaideas.springboot.di.app.SpringBootDiApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <recent_temporary>
-      <list>
-        <item itemvalue="Application.Main" />
-      </list>
-    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
-  <component name="SvnConfiguration">
-    <configuration />
-  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="44cf1b86-1771-4436-a1e6-ecb1a68c0e9b" name="Default Changelist" comment="" />
-      <created>1582650170728</created>
+      <changelist id="72c6da21-7a6f-4d72-a691-a55e4a61a731" name="Changes" comment="" />
+      <created>1645543137465</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1582650170728</updated>
-      <workItem from="1582650172136" duration="312000" />
-      <workItem from="1583342106346" duration="3537000" />
-      <workItem from="1583396960128" duration="13000" />
-      <workItem from="1583427740115" duration="2560000" />
-      <workItem from="1583484093225" duration="12000" />
-      <workItem from="1583772629744" duration="606000" />
-      <workItem from="1583826429924" duration="1202000" />
-      <workItem from="1583947475696" duration="1512000" />
-      <workItem from="1603638993378" duration="4700000" />
-      <workItem from="1603650584496" duration="2967000" />
-      <workItem from="1604418649786" duration="838000" />
-      <workItem from="1604508218821" duration="3160000" />
-      <workItem from="1604853057740" duration="12620000" />
-      <workItem from="1614508030493" duration="2227000" />
-      <workItem from="1614973717571" duration="1325000" />
-      <workItem from="1615114787591" duration="4609000" />
-      <workItem from="1615652145893" duration="6434000" />
-      <workItem from="1615745765622" duration="705000" />
-      <workItem from="1616257840336" duration="7177000" />
-      <workItem from="1617212762842" duration="2036000" />
-      <workItem from="1617296234398" duration="2547000" />
-      <workItem from="1617464041823" duration="3920000" />
-      <workItem from="1617901555068" duration="3129000" />
-      <workItem from="1619025106692" duration="8933000" />
-      <workItem from="1633171679830" duration="639000" />
-      <workItem from="1633331151274" duration="88000" />
-      <workItem from="1636459073882" duration="2696000" />
-      <workItem from="1637409528321" duration="28000" />
-      <workItem from="1637429632876" duration="5776000" />
-      <workItem from="1637564978005" duration="21000" />
-      <workItem from="1637565950948" duration="33000" />
-      <workItem from="1638034076999" duration="4444000" />
-      <workItem from="1641500901535" duration="2438000" />
-      <workItem from="1641666388572" duration="3942000" />
-      <workItem from="1643042080607" duration="1565000" />
-      <workItem from="1643100154479" duration="9000" />
-      <workItem from="1647113289839" duration="1193000" />
-      <workItem from="1647450182157" duration="1989000" />
-      <workItem from="1647796125417" duration="711000" />
+      <updated>1645543137465</updated>
+      <workItem from="1645543140375" duration="18139000" />
+      <workItem from="1646038373891" duration="3826000" />
+      <workItem from="1647450581595" duration="1114000" />
     </task>
-    <task id="LOCAL-00001" summary="MapTemplate - creando las parcelas según la dirección del personaje">
-      <created>1615658543973</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1615658543973</updated>
-    </task>
-    <task id="LOCAL-00002" summary="Player - Simulando los movimientos para construir el mapa. Trabajando en &quot;action&quot;">
-      <created>1616266297645</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1616266297645</updated>
-    </task>
-    <task id="LOCAL-00003" summary="Player - Simulando los movimientos para construir el mapa. Trabajando en &quot;action y jump&quot;">
-      <created>1617472545179</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1617472545179</updated>
-    </task>
-    <task id="LOCAL-00004" summary="Player - Simulando los movimientos para construir el mapa. Corrección en jump">
-      <created>1617904858656</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1617904858656</updated>
-    </task>
-    <task id="LOCAL-00005" summary="REFACTOR - Tile to Cell">
-      <created>1637565973827</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1637565973827</updated>
-    </task>
-    <option name="localTasksCounter" value="6" />
     <servers />
-  </component>
-  <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="13725000" />
-  </component>
-  <component name="ToolWindowManager">
-    <frame x="-6" y="0" width="781" height="870" extended-state="0" />
-    <editor active="true" />
-    <layout>
-      <window_info content_ui="combo" id="Project" order="0" weight="0.5159501" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Image Layers" order="2" />
-      <window_info id="Designer" order="3" />
-      <window_info id="UI Designer" order="4" />
-      <window_info id="Capture Tool" order="5" />
-      <window_info id="Favorites" order="6" side_tool="true" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="8" />
-      <window_info anchor="bottom" id="Database Changes" order="9" />
-      <window_info anchor="bottom" id="Terminal" order="10" />
-      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="right" id="Google Cloud Storage" order="4" />
-      <window_info anchor="right" id="Theme Preview" order="5" />
-      <window_info anchor="right" id="Maven" order="6" />
-      <window_info anchor="right" id="Capture Analysis" order="7" />
-      <window_info anchor="right" id="Palette&#9;" order="8" />
-      <window_info anchor="right" id="Database" order="9" />
-    </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
-  <component name="Vcs.Log.Tabs.Properties">
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State />
-          </value>
-        </entry>
-      </map>
-    </option>
-    <option name="RECENT_FILTERS">
-      <map>
-        <entry key="Branch">
-          <value>
-            <list />
-          </value>
-        </entry>
-        <entry key="User">
-          <value>
-            <list />
-          </value>
-        </entry>
-      </map>
-    </option>
-  </component>
-  <component name="VcsManagerConfiguration">
-    <MESSAGE value="MapTemplate - creando las parcelas según la dirección del personaje" />
-    <MESSAGE value="Player - Simulando los movimientos para construir el mapa. Trabajando en &quot;action&quot;" />
-    <MESSAGE value="Player - Simulando los movimientos para construir el mapa. Trabajando en &quot;action y jump&quot;" />
-    <MESSAGE value="Player - Simulando los movimientos para construir el mapa. Corrección en jump" />
-    <MESSAGE value="REFACTOR - Tile to Cell" />
-    <option name="LAST_COMMIT_MESSAGE" value="REFACTOR - Tile to Cell" />
-  </component>
-  <component name="editorHistoryManager">
-    <entry file="jar://$PROJECT_DIR$/../../../../Program Files/Java/jdk1.8.0_191/src.zip!/java/lang/Integer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="237">
-          <caret line="51" column="19" selection-start-line="51" selection-start-column="19" selection-end-line="51" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/../../../../Program Files/Java/jdk1.8.0_191/jre/lib/ext/nashorn.jar!/jdk/nashorn/internal/objects/annotations/Getter.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="14" column="18" selection-start-line="14" selection-start-column="18" selection-end-line="14" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/map/MapObject.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/map/MapTemplate.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="24" selection-start-line="2" selection-start-column="24" selection-end-line="2" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/map/Cell.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="239">
-          <caret line="23" column="44" selection-start-line="23" selection-start-column="32" selection-end-line="23" selection-end-column="44" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/map/Player.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="44" column="41" selection-start-line="44" selection-start-column="41" selection-end-line="44" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/map/Block.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>
