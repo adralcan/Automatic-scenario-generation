@@ -52,7 +52,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.google.cloudcode.ide_session_index" value="20220316_0000" />
+    <property name="com.google.cloudcode.ide_session_index" value="20220502_0002" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -81,7 +81,7 @@
       </method>
     </configuration>
   </component>
-  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="false" />
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -96,6 +96,12 @@
       <workItem from="1646038373891" duration="3826000" />
       <workItem from="1647450581595" duration="1114000" />
       <workItem from="1647799562326" duration="8575000" />
+      <workItem from="1649678041248" duration="1653000" />
+      <workItem from="1650349110000" duration="45000" />
+      <workItem from="1651251150391" duration="3393000" />
+      <workItem from="1651491882898" duration="600000" />
+      <workItem from="1651504138975" duration="5620000" />
+      <workItem from="1651515435660" duration="663000" />
     </task>
     <task id="LOCAL-00001" summary="Planteamiento del algoritmo de generador de soluciones">
       <created>1647808319386</created>
@@ -111,30 +117,34 @@
       <option name="project" value="LOCAL" />
       <updated>1647808350350</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Avanzando en el algoritmo de generación de soluciones. Buscando en el teorema del palomar y combinatoria">
+      <created>1649056161282</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1649056161282</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Planteamiento del algoritmo de generador de soluciones" />
-    <option name="LAST_COMMIT_MESSAGE" value="Planteamiento del algoritmo de generador de soluciones" />
-  </component>
-  <component name="WindowStateProjectService">
-    <state x="527" y="134" key="CommitChangelistDialog2" timestamp="1647808349965">
-      <screen x="0" y="0" width="1920" height="1080" />
-    </state>
-    <state x="527" y="134" key="CommitChangelistDialog2/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1647808349965" />
-    <state x="461" y="182" key="SettingsEditor" timestamp="1647809166913">
-      <screen x="0" y="0" width="1920" height="1080" />
-    </state>
-    <state x="461" y="182" key="SettingsEditor/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1647809166913" />
-    <state x="552" y="272" key="Vcs.Push.Dialog.v2" timestamp="1647808352040">
-      <screen x="0" y="0" width="1920" height="1080" />
-    </state>
-    <state x="552" y="272" key="Vcs.Push.Dialog.v2/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1647808352040" />
-    <state x="769" y="456" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1647808285497">
-      <screen x="0" y="0" width="1920" height="1080" />
-    </state>
-    <state x="769" y="456" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1647808285497" />
+    <MESSAGE value="Avanzando en el algoritmo de generación de soluciones. Buscando en el teorema del palomar y combinatoria" />
+    <option name="LAST_COMMIT_MESSAGE" value="Avanzando en el algoritmo de generación de soluciones. Buscando en el teorema del palomar y combinatoria" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
