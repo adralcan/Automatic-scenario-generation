@@ -69,7 +69,6 @@ public class SolutionGenerator {
         // (?) r deberia pasar a la solucion parcial con su propio valor o se divide en partes para creaar subsoluciones
 
         // IMPORTANTE: que pasa si defaultBlocks.size() es mayor que r
-        // 
 
         ArrayList<ArrayList<String>> partialSolutions = new ArrayList<>();
         int tempIndex[] = new int[r + 1];
@@ -81,5 +80,6 @@ public class SolutionGenerator {
         // Que haya siempre un avance o un retroceder
         // Si hay tres giros seguidos, cambiarlo por el giro contrario
         // No puede haber un avanzar y un retroceder seguidos, da igual el orden
+        // ^ Esta todavía no se mete en SolutionGeneratorRules porque puede haber teletransportes
     }
 }

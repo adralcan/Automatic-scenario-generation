@@ -5,6 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="72c6da21-7a6f-4d72-a691-a55e4a61a731" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/mapGenerator/springboot/solutionGenerator/models/SolutionGeneratorRules.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/mapGenerator/springboot/solutionGenerator/models/SolutionGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mapGenerator/springboot/solutionGenerator/models/SolutionGenerator.java" afterDir="false" />
     </list>
@@ -17,8 +18,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Interface" />
-        <option value="Class" />
         <option value="HTML File" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -34,10 +35,20 @@
       <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
     </file-type-list>
   </component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="hiddenUrls">
+      <set>
+        <option value="https://github.com/adralcan/Automatic-scenario-generation.git" />
+      </set>
+    </option>
+  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="25TFONOQkEhHMUoRbbF3SH8xZOi" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -50,6 +61,7 @@
     <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="ToolWindowJava Enterprise.ShowToolbar" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.google.cloudcode.ide_session_index" value="20220502_0002" />
@@ -57,9 +69,9 @@
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Modules" />
-    <property name="project.structure.proportion" value="0.0" />
-    <property name="project.structure.side.proportion" value="0.0" />
-    <property name="settings.editor.selected.configurable" value="settings.github" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="reference.settings.project.maven.importing" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -74,14 +86,23 @@
   </component>
   <component name="RunManager">
     <configuration name="SpringBootDiApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
-      <module name="spring-boot-di" />
+      <module name="spring-boot-web-2" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.bolsaideas.springboot.di.app.SpringBootDiApplication" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="spring-boot-web-2" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.bolsaideas.springboot.di.app.SpringBootDiApplication" />
+      <option name="ALTERNATIVE_JRE_PATH" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
   </component>
-  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="SpellCheckerSettings" BundledDictionaries="0" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" Dictionaries="0" CorrectionsLimit="5" DefaultDictionary="application-level" UseSingleDictionary="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -135,7 +156,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
@@ -145,6 +168,44 @@
     <MESSAGE value="Planteamiento del algoritmo de generador de soluciones" />
     <MESSAGE value="Avanzando en el algoritmo de generación de soluciones. Buscando en el teorema del palomar y combinatoria" />
     <option name="LAST_COMMIT_MESSAGE" value="Avanzando en el algoritmo de generación de soluciones. Buscando en el teorema del palomar y combinatoria" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="552" y="198" key="#Project_Structure" timestamp="1651687323733">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="552" y="198" key="#Project_Structure/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1651687323733" />
+    <state x="506" y="86" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1651687514609">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="506" y="86" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1651687514609" />
+    <state x="275" y="323" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1651687509612">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="275" y="323" key="#com.intellij.ide.util.TreeClassChooserDialog/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1651687509612" />
+    <state width="938" height="295" key="GridCell.Tab.0.bottom" timestamp="1651687003835">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="938" height="295" key="GridCell.Tab.0.bottom/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1651687003835" />
+    <state width="938" height="295" key="GridCell.Tab.0.center" timestamp="1651687003834">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="938" height="295" key="GridCell.Tab.0.center/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1651687003834" />
+    <state width="938" height="295" key="GridCell.Tab.0.left" timestamp="1651687003834">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="938" height="295" key="GridCell.Tab.0.left/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1651687003834" />
+    <state width="938" height="295" key="GridCell.Tab.0.right" timestamp="1651687003834">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="938" height="295" key="GridCell.Tab.0.right/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1651687003834" />
+    <state x="498" y="110" key="SettingsEditor" timestamp="1651687100510">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="498" y="110" key="SettingsEditor/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1651687100510" />
+    <state x="623" y="235" width="672" height="678" key="search.everywhere.popup" timestamp="1651686866662">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="623" y="235" width="672" height="678" key="search.everywhere.popup/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1651686866662" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
