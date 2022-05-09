@@ -14,7 +14,7 @@ public class SolutionGeneratorRules {
     static ArrayList<String> simplifyTurns(ArrayList<String> partialSolution) {
         if (partialSolution.size() <= 3) return partialSolution;
         int cont = 0;
-        Boolean same = false;
+        boolean same = false;
         for (int i = 1; i <= partialSolution.size(); i++) {
             if (partialSolution.get(i).equals("turnLeft") || partialSolution.get(i).equals("turnRight")) {
                 if (partialSolution.get(i).equals(partialSolution.get(i - 1))) {

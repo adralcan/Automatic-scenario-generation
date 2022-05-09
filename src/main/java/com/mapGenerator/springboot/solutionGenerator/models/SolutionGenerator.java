@@ -34,8 +34,27 @@ public class SolutionGenerator {
     // Echar un ojo a Principio del palomar
 
     // Casos base
-    // Qué pasa cuando solo hay un tipo de elemento (?)
-    // Se muiltiplica n veces y se seleccionan subconjuntos de distintos tamaños para generar los mapas para esa unidad
+    //Combinaciones con repetición (n k):
+    //
+    //Si tengo menos elementos disponibles de los agrupados lo que voy a hacer es coger los elementos por orden,
+    //y hacer combinaciones con ese elemento repitiendo de 1 a m veces
+    //
+    //1º caso crítico:
+    //Una sola instrucción
+    //n = 1  1 <= k < m siendo m un numero natural
+    //Ejemplo de avance => A, k = 4
+    //
+    //2º caso normal:
+    //Dos instrucciones -> n < k
+    //n = 1  1 <= k < m siendo m un numero natural
+    //Ejemplo de avance => A giro derecha => T, k = 4
+    //AT de 4
+    //TAAA ATAA AATA
+    //TTTA TATT TTAT
+    //AATT ATTA TTAA ATAT TATA
+    //
+    //3º caso crítico:
+    //n = k
 
     // defaultBlocks: instrucciones por defecto en la unidad
     // tempIndex: indices de la combinacion que se esta formando
@@ -44,7 +63,6 @@ public class SolutionGenerator {
     public static void partialSolutionGenerator(ArrayList<ArrayList<String>> partialSolutions,
                                                 ArrayList<String> defaultBlocks,
                                                 int tempIndex[], int index, int r, int start, int end) {
-
         // https://www.geeksforgeeks.org/combinations-with-repetitions/
 
         // Cuando el indice se convierte en el limite, es que se puede guardar la solucion
@@ -63,6 +81,40 @@ public class SolutionGenerator {
         }
     }
 
+    public static void buildCombination(ArrayList<ArrayList<String>> partialSolutions, ArrayList<String> defaultBlocks, int r) {
+        ArrayList<String> newSetDefaultBlocks = defaultBlocks;
+        for (int i = 0; i < defaultBlocks.size(); i++) {
+            while (newSetDefaultBlocks.size() < r) {
+                newSetDefaultBlocks.add(defaultBlocks.get(i));
+            }
+            int tempIndex[] = new int[r + 1];
+            partialSolutionGenerator(partialSolutions, newSetDefaultBlocks, tempIndex, 0, r, 0, newSetDefaultBlocks.size() - 1);
+            newSetDefaultBlocks = defaultBlocks;
+        }
+    }
+
+    public static void completeSolutionGenerator(ArrayList<String> completeSolutions,
+                                                 ArrayList<ArrayList<String>> partialSolutions,
+                                                 int tempIndex[][], int i, int j, int r, int start, int end) {
+/*
+        // https://www.geeksforgeeks.org/combinations-with-repetitions/
+
+        // Cuando el indice se convierte en el limite, es que se puede guardar la solucion
+        if (index == r) {
+            ArrayList<String> partialSolution = new ArrayList<>();
+            for (int i : tempIndex) {
+                partialSolution.add(defaultBlocks.get(i));
+            }
+            partialSolutions.add(partialSolution);
+        }
+        // Elegir todos los elementos posibles de uno en uno. Como se puede repetir no se tiene en cuenta si ha sido
+        // elegido ya. Se procede a la recurrencia.
+        for (int i = 0; i <= end; i++) {
+            tempIndex[index] = i;
+            partialSolutionGenerator(partialSolutions, defaultBlocks, tempIndex, index + 1, r, i, end);
+        }*/
+    }
+
     // defaultBlocks: instrucciones por defecto en la unidad
     // r: tamaño de la combinación que se va a generar
     public static void solutionGenerator(ArrayList<String> defaultBlocks, int r) {
@@ -72,7 +124,12 @@ public class SolutionGenerator {
 
         ArrayList<ArrayList<String>> partialSolutions = new ArrayList<>();
         int tempIndex[] = new int[r + 1];
-        partialSolutionGenerator(partialSolutions, defaultBlocks, tempIndex, 0, r, 0, defaultBlocks.size() - 1);
+        if(defaultBlocks.size() < r) {
+
+        }
+        else{
+            partialSolutionGenerator(partialSolutions, defaultBlocks, tempIndex, 0, r, 0, defaultBlocks.size() - 1);
+        }
         // Ahora tengo las soluciones parciales
         // (?) Separar las que son candidatas por si mismas del resto
         // Para que sea candidata debe cumplir los requisitos
