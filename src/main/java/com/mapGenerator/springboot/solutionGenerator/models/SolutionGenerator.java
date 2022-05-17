@@ -33,6 +33,31 @@ public class SolutionGenerator {
 
     // Echar un ojo a Principio del palomar
 
+    // defaultBlocks: instrucciones por defecto en la unidad
+    // tempIndex: indices de la combinacion que se esta formando
+    // r: tamaño de la combinación que se va a generar
+    // start & end:
+    public static void candidateSolutionGenerator(ArrayList<ArrayList<String>> candidateSolutions,
+                                                ArrayList<String> defaultBlocks,
+                                                int tempIndex[], int index, int r, int start, int end) {
+        // https://www.geeksforgeeks.org/combinations-with-repetitions/
+
+        // Cuando el indice se convierte en el limite, es que se puede guardar la solucion
+        if (index == r) {
+            ArrayList<String> candidateSolution = new ArrayList<>();
+            for (int i : tempIndex) {
+                candidateSolution.add(defaultBlocks.get(i));
+            }
+            candidateSolutions.add(candidateSolution);
+        }
+        // Elegir todos los elementos posibles de uno en uno. Como se puede repetir no se tiene en cuenta si ha sido
+        // elegido ya. Se procede a la recurrencia.
+        for (int i = 0; i <= end; i++) {
+            tempIndex[index] = i;
+            candidateSolutionGenerator(candidateSolutions, defaultBlocks, tempIndex, index + 1, r, i, end);
+        }
+    }
+
     // Casos base
     //Combinaciones con repetición (n k):
     //
@@ -52,67 +77,18 @@ public class SolutionGenerator {
     //TAAA ATAA AATA
     //TTTA TATT TTAT
     //AATT ATTA TTAA ATAT TATA
-    //
-    //3º caso crítico:
-    //n = k
-
-    // defaultBlocks: instrucciones por defecto en la unidad
-    // tempIndex: indices de la combinacion que se esta formando
-    // r: tamaño de la combinación que se va a generar
-    // start & end:
-    public static void partialSolutionGenerator(ArrayList<ArrayList<String>> partialSolutions,
-                                                ArrayList<String> defaultBlocks,
-                                                int tempIndex[], int index, int r, int start, int end) {
-        // https://www.geeksforgeeks.org/combinations-with-repetitions/
-
-        // Cuando el indice se convierte en el limite, es que se puede guardar la solucion
-        if (index == r) {
-            ArrayList<String> partialSolution = new ArrayList<>();
-            for (int i : tempIndex) {
-                partialSolution.add(defaultBlocks.get(i));
-            }
-            partialSolutions.add(partialSolution);
-        }
-        // Elegir todos los elementos posibles de uno en uno. Como se puede repetir no se tiene en cuenta si ha sido
-        // elegido ya. Se procede a la recurrencia.
-        for (int i = 0; i <= end; i++) {
-            tempIndex[index] = i;
-            partialSolutionGenerator(partialSolutions, defaultBlocks, tempIndex, index + 1, r, i, end);
-        }
-    }
-
-    public static void buildCombination(ArrayList<ArrayList<String>> partialSolutions, ArrayList<String> defaultBlocks, int r) {
+    //3º caso
+    // n > r: de momento lo dejamos hasta que sea un problema
+    public static void buildCombination(ArrayList<ArrayList<String>> candidateSolutions, ArrayList<String> defaultBlocks, int r) {
         ArrayList<String> newSetDefaultBlocks = defaultBlocks;
         for (int i = 0; i < defaultBlocks.size(); i++) {
             while (newSetDefaultBlocks.size() < r) {
                 newSetDefaultBlocks.add(defaultBlocks.get(i));
             }
             int tempIndex[] = new int[r + 1];
-            partialSolutionGenerator(partialSolutions, newSetDefaultBlocks, tempIndex, 0, r, 0, newSetDefaultBlocks.size() - 1);
+            candidateSolutionGenerator(candidateSolutions, newSetDefaultBlocks, tempIndex, 0, r, 0, newSetDefaultBlocks.size() - 1);
             newSetDefaultBlocks = defaultBlocks;
         }
-    }
-
-    public static void completeSolutionGenerator(ArrayList<String> completeSolutions,
-                                                 ArrayList<ArrayList<String>> partialSolutions,
-                                                 int tempIndex[][], int i, int j, int r, int start, int end) {
-/*
-        // https://www.geeksforgeeks.org/combinations-with-repetitions/
-
-        // Cuando el indice se convierte en el limite, es que se puede guardar la solucion
-        if (index == r) {
-            ArrayList<String> partialSolution = new ArrayList<>();
-            for (int i : tempIndex) {
-                partialSolution.add(defaultBlocks.get(i));
-            }
-            partialSolutions.add(partialSolution);
-        }
-        // Elegir todos los elementos posibles de uno en uno. Como se puede repetir no se tiene en cuenta si ha sido
-        // elegido ya. Se procede a la recurrencia.
-        for (int i = 0; i <= end; i++) {
-            tempIndex[index] = i;
-            partialSolutionGenerator(partialSolutions, defaultBlocks, tempIndex, index + 1, r, i, end);
-        }*/
     }
 
     // defaultBlocks: instrucciones por defecto en la unidad
@@ -122,21 +98,32 @@ public class SolutionGenerator {
 
         // IMPORTANTE: que pasa si defaultBlocks.size() es mayor que r
 
-        ArrayList<ArrayList<String>> partialSolutions = new ArrayList<>();
+        ArrayList<ArrayList<String>> candidateSolutions = new ArrayList<>();
         int tempIndex[] = new int[r + 1];
-        if(defaultBlocks.size() < r) {
-
+        if (defaultBlocks.size() < r) {
+            buildCombination(candidateSolutions, defaultBlocks, r);
+        } else {
+            candidateSolutionGenerator(candidateSolutions, defaultBlocks, tempIndex, 0, r, 0, defaultBlocks.size() - 1);
         }
-        else{
-            partialSolutionGenerator(partialSolutions, defaultBlocks, tempIndex, 0, r, 0, defaultBlocks.size() - 1);
-        }
-        // Ahora tengo las soluciones parciales
-        // (?) Separar las que son candidatas por si mismas del resto
+        // Ahora tengo las soluciones sin filtrar
+        // Separar las que son candidatas por si mismas del resto
         // Para que sea candidata debe cumplir los requisitos
         // Reglas que se me van ocurriendo:
         // Que haya siempre un avance o un retroceder
         // Si hay tres giros seguidos, cambiarlo por el giro contrario
         // No puede haber un avanzar y un retroceder seguidos, da igual el orden
         // ^ Esta todavía no se mete en SolutionGeneratorRules porque puede haber teletransportes
+        // Se puede meter como regla o se puede poner un teleport
+        ArrayList<ArrayList<String>> discardedSolutions = new ArrayList<>();
+        for (ArrayList<String> candidateSolution : candidateSolutions) {
+            String keyBlocks [] = {"advance", "backwards"};
+            int keBlocksReps [] = SolutionGeneratorRules.leastOneKeyBlock(keyBlocks, candidateSolution);
+            /*if(keBlocksReps[0] < 1 || ){
+                discardedSolutions.add(candidateSolution);
+            }
+            else if(
+
+            )*/
+        }
     }
 }

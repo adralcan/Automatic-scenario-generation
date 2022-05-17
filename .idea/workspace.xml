@@ -64,7 +64,7 @@
     <property name="ToolWindowJava Enterprise.ShowToolbar" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.google.cloudcode.ide_session_index" value="20220508_0000" />
+    <property name="com.google.cloudcode.ide_session_index" value="20220517_0000" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -126,6 +126,10 @@
       <workItem from="1651562805007" duration="114000" />
       <workItem from="1652009686771" duration="3057000" />
       <workItem from="1652033471123" duration="3825000" />
+      <workItem from="1652079038522" duration="86000" />
+      <workItem from="1652605637280" duration="2295000" />
+      <workItem from="1652628879337" duration="6210000" />
+      <workItem from="1652770959056" duration="514000" />
     </task>
     <task id="LOCAL-00001" summary="Planteamiento del algoritmo de generador de soluciones">
       <created>1647808319386</created>
@@ -155,7 +159,14 @@
       <option name="project" value="LOCAL" />
       <updated>1651562862297</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Casos especiales para generar las soluciones parciales">
+      <created>1652079105234</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1652079105234</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -176,7 +187,8 @@
     <MESSAGE value="Planteamiento del algoritmo de generador de soluciones" />
     <MESSAGE value="Avanzando en el algoritmo de generación de soluciones. Buscando en el teorema del palomar y combinatoria" />
     <MESSAGE value="Soluciones parciales" />
-    <option name="LAST_COMMIT_MESSAGE" value="Soluciones parciales" />
+    <MESSAGE value="Casos especiales para generar las soluciones parciales" />
+    <option name="LAST_COMMIT_MESSAGE" value="Casos especiales para generar las soluciones parciales" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
