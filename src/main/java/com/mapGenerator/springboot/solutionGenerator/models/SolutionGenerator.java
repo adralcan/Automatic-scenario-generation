@@ -3,12 +3,8 @@ package com.mapGenerator.springboot.solutionGenerator.models;
 import java.util.ArrayList;
 
 public class SolutionGenerator {
-    private ArrayList<String> defaultBlocks; // Instrucciones disponibles para generar la solucion
     private ArrayList<ArrayList<String>> solutions; // soluciones diferentes, cada solucion es una lista de instrucciones
 
-    public ArrayList<String> getDefaultBlocks() {
-        return defaultBlocks;
-    }
 
     // Las instrucciones disponibles estaran definidas por la unidad a la que pertenezcan.
     // El peor caso es aquella unidad que tengan todas las instrucciones del plan de estudios disponibles
@@ -93,7 +89,7 @@ public class SolutionGenerator {
 
     // defaultBlocks: instrucciones por defecto en la unidad
     // r: tamaño de la combinación que se va a generar
-    public static void solutionGenerator(ArrayList<String> defaultBlocks, int r) {
+    public static void solutionGenerator(ArrayList<String> defaultBlocks, int r, ArrayList<String> additionalKeyBlocks) {
         // (?) r deberia pasar a la solucion parcial con su propio valor o se divide en partes para creaar subsoluciones
 
         // IMPORTANTE: que pasa si defaultBlocks.size() es mayor que r
@@ -115,15 +111,37 @@ public class SolutionGenerator {
         // ^ Esta todavía no se mete en SolutionGeneratorRules porque puede haber teletransportes
         // Se puede meter como regla o se puede poner un teleport
         ArrayList<ArrayList<String>> discardedSolutions = new ArrayList<>();
+        ArrayList<ArrayList<String>> solutions = new ArrayList<>();
         for (ArrayList<String> candidateSolution : candidateSolutions) {
-            String keyBlocks [] = {"advance", "backwards"};
-            int keBlocksReps [] = SolutionGeneratorRules.leastOneKeyBlock(keyBlocks, candidateSolution);
-            /*if(keBlocksReps[0] < 1 || ){
+            if(!isCandidate(candidateSolution, additionalKeyBlocks)){
                 discardedSolutions.add(candidateSolution);
             }
-            else if(
-
-            )*/
+            else {
+                solutions.add(candidateSolution);
+            }
         }
+        // Que hago con las que no son candidatas, las deshecho o las reciclo
+    }
+
+    static boolean isCandidate(ArrayList<String> candidateSolution, ArrayList<String> additionalKeyBlocks) {
+        String keyBlocks[] = {"advance", "backwards"};
+        if(additionalKeyBlocks != null) {
+            System.arraycopy(additionalKeyBlocks.toArray(), 0, keyBlocks, 0, additionalKeyBlocks.size());
+        }
+        int keBlocksReps[] = SolutionGeneratorRules.leastOneKeyBlock(keyBlocks, candidateSolution);
+        for (int reps : keBlocksReps) {
+            if (reps < 1) {
+                return false;
+            }
+        }
+        int prevSize = candidateSolution.size();
+        candidateSolution = SolutionGeneratorRules.simplifyTurns(candidateSolution);
+        if(candidateSolution.size() != prevSize) {
+            return false;
+        }
+        if(!SolutionGeneratorRules.lastBlock(candidateSolution)) {
+            return false;
+        }
+        return true;
     }
 }

@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="72c6da21-7a6f-4d72-a691-a55e4a61a731" name="Changes" comment="">
+    <list default="true" id="72c6da21-7a6f-4d72-a691-a55e4a61a731" name="Changes" comment="Reglas de validación de soluciones parciales">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/mapGenerator/springboot/solutionGenerator/models/SolutionGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mapGenerator/springboot/solutionGenerator/models/SolutionGenerator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/mapGenerator/springboot/solutionGenerator/models/SolutionGeneratorRules.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mapGenerator/springboot/solutionGenerator/models/SolutionGeneratorRules.java" afterDir="false" />
@@ -102,7 +102,7 @@
       </method>
     </configuration>
   </component>
-  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="SpellCheckerSettings" BundledDictionaries="0" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" Dictionaries="0" CorrectionsLimit="5" DefaultDictionary="application-level" UseSingleDictionary="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -170,14 +170,16 @@
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="3" />
+    <option name="version" value="1" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
@@ -189,6 +191,12 @@
     <MESSAGE value="Soluciones parciales" />
     <MESSAGE value="Casos especiales para generar las soluciones parciales" />
     <option name="LAST_COMMIT_MESSAGE" value="Casos especiales para generar las soluciones parciales" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="527" y="134" key="CommitChangelistDialog2" timestamp="1653154183101">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="527" y="134" key="CommitChangelistDialog2/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1653154183101" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

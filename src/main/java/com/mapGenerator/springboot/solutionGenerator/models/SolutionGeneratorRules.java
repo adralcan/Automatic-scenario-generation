@@ -43,4 +43,9 @@ public class SolutionGeneratorRules {
         }
         return candidateSolution;
     }
+
+    static boolean lastBlock(ArrayList<String> candidateSolution) {
+        return candidateSolution.get(candidateSolution.size() - 1).equals("advance") ||
+                candidateSolution.get(candidateSolution.size() - 1).equals("backwards");
+    }
 }
