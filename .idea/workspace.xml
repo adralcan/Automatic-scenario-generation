@@ -4,10 +4,9 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="72c6da21-7a6f-4d72-a691-a55e4a61a731" name="Changes" comment="Reglas de validación de soluciones parciales">
+    <list default="true" id="72c6da21-7a6f-4d72-a691-a55e4a61a731" name="Changes" comment="separando soluciones factibles de las que no son candidatas">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/mapGenerator/springboot/solutionGenerator/models/SolutionGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mapGenerator/springboot/solutionGenerator/models/SolutionGenerator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/mapGenerator/springboot/solutionGenerator/models/SolutionGeneratorRules.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mapGenerator/springboot/solutionGenerator/models/SolutionGeneratorRules.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -130,6 +129,8 @@
       <workItem from="1652605637280" duration="2295000" />
       <workItem from="1652628879337" duration="6210000" />
       <workItem from="1652770959056" duration="514000" />
+      <workItem from="1654535594042" duration="68000" />
+      <workItem from="1654537682016" duration="4185000" />
     </task>
     <task id="LOCAL-00001" summary="Planteamiento del algoritmo de generador de soluciones">
       <created>1647808319386</created>
@@ -166,7 +167,14 @@
       <option name="project" value="LOCAL" />
       <updated>1652079105234</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="separando soluciones factibles de las que no son candidatas">
+      <created>1653156086033</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1653156086034</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -190,13 +198,22 @@
     <MESSAGE value="Avanzando en el algoritmo de generación de soluciones. Buscando en el teorema del palomar y combinatoria" />
     <MESSAGE value="Soluciones parciales" />
     <MESSAGE value="Casos especiales para generar las soluciones parciales" />
-    <option name="LAST_COMMIT_MESSAGE" value="Casos especiales para generar las soluciones parciales" />
+    <MESSAGE value="separando soluciones factibles de las que no son candidatas" />
+    <option name="LAST_COMMIT_MESSAGE" value="separando soluciones factibles de las que no son candidatas" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="527" y="134" key="CommitChangelistDialog2" timestamp="1653154183101">
+    <state x="527" y="134" key="CommitChangelistDialog2" timestamp="1653156085589">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="527" y="134" key="CommitChangelistDialog2/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1653154183101" />
+    <state x="527" y="134" key="CommitChangelistDialog2/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1653156085589" />
+    <state x="552" y="272" key="Vcs.Push.Dialog.v2" timestamp="1653156087285">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="552" y="272" key="Vcs.Push.Dialog.v2/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1653156087285" />
+    <state x="769" y="456" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1654535606262">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="769" y="456" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1654535606262" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
