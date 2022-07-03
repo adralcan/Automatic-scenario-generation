@@ -173,4 +173,17 @@ public class SolutionGenerator {
         }
         return true;
     }
+
+
+
+
+
+    //__________________________________________PROGRAMACION_DINAMICA___________________________________________________
+
+    // 1. Hay un problema grave, hasta ahora he supuesto que con el set de datos dado habria repeticion. Pero en el
+    // set de datos no hay repeticion porque siempre hay un bloque de cada tipo. Por tanto, a partir de "defaultBlocks"
+    // hay que generar un multiconjunto con bloques repetidos
+
+    // 2. Para seguir adelante con el algoritmo habrá que tener en cuenta la teoria que hay en:
+    // file:///E:/hlocal/MARP/DINAMICA/progdinamica.pdf y el ejemplo que hay en https://www.youtube.com/watch?v=2GEIvssFZRg
 }
