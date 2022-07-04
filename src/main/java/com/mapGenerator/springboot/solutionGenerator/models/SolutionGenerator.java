@@ -178,11 +178,24 @@ public class SolutionGenerator {
 
 
 
-    //__________________________________________PROGRAMACION_DINAMICA___________________________________________________
+    //___________________________________v2_CON_PROGRAMACION_DINAMICA___________________________________________________
 
     // 1. Hay un problema grave, hasta ahora he supuesto que con el set de datos dado habria repeticion. Pero en el
     // set de datos no hay repeticion porque siempre hay un bloque de cada tipo. Por tanto, a partir de "defaultBlocks"
-    // hay que generar un multiconjunto con bloques repetidos
+    // hay que generar un multiconjunto con bloques repetidos. Primer planteamiento al problema con ejemplo:
+    // "defaultBlocks":  ["advance","backwards","turnRight","turnLeft","action"]
+    // "solution": ["turnLeft","advance","turnLeft","advance","advance","action","turnRight","action","advance","advance"]
+    // n = defaultBlocks.length = 5
+    // r = solution.length = 10
+    // int [] subsetDefaultBlocks = new Array(n).fill(0);
+    // Como en solutionGenerator se pasa por parametro additionalKeyBlocks, los que pertenezcan a esa lista tendra que
+    // haber uno como minimo. Si hay un bloque additionalKeyBlocks que no aparece en defaultBlocks, se añade al array y
+    // también tiene que haber uno como mínimo (Esto puede ocurrir con frecuencia con el bloque de bucles)
+    // int newR = r - additionalKeyBlocks.length
+    // for (let i = 0; i < newR; i++) {
+    // numbers[Math.floor(Math.random() * newR) % (n - 1)]++;
+    // }
+    // Con esta implementacion deberia pasar a combinaciones sin repeticion (?)
 
     // 2. Para seguir adelante con el algoritmo habrá que tener en cuenta la teoria que hay en:
     // file:///E:/hlocal/MARP/DINAMICA/progdinamica.pdf y el ejemplo que hay en https://www.youtube.com/watch?v=2GEIvssFZRg
