@@ -195,7 +195,8 @@ public class SolutionGenerator {
     // for (let i = 0; i < newR; i++) {
     // numbers[Math.floor(Math.random() * newR) % (n - 1)]++;
     // }
-    // Con esta implementacion deberia pasar a combinaciones sin repeticion (?)
+    // Con esta implementacion pasa a ser permutaciones con repetición
+    // https://www.wextensible.com/temas/recursivos/permutar.html
 
     // 2. Para seguir adelante con el algoritmo habrá que tener en cuenta la teoria que hay en:
     // file:///E:/hlocal/MARP/DINAMICA/progdinamica.pdf y el ejemplo que hay en https://www.youtube.com/watch?v=2GEIvssFZRg
