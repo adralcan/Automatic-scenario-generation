@@ -233,14 +233,18 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="527" y="134" key="CommitChangelistDialog2/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1656951103363" />
+    <state x="685" y="255" key="VCS.ChangeListViewerDialog" timestamp="1659973564789">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="685" y="255" key="VCS.ChangeListViewerDialog/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1659973564789" />
     <state x="552" y="272" key="Vcs.Push.Dialog.v2" timestamp="1656951105295">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="552" y="272" key="Vcs.Push.Dialog.v2/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1656951105294" />
-    <state x="769" y="456" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1656858805506">
+    <state x="769" y="456" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1659973558972">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="769" y="456" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1656858805506" />
+    <state x="769" y="456" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1659973558972" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
