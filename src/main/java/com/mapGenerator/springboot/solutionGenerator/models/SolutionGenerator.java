@@ -1,6 +1,8 @@
 package com.mapGenerator.springboot.solutionGenerator.models;
 
+import java.sql.Array;
 import java.util.ArrayList;
+import java.util.Arrays;
 
 public class SolutionGenerator {
     private ArrayList<ArrayList<String>> solutions; // soluciones diferentes, cada solucion es una lista de instrucciones
@@ -180,7 +182,7 @@ public class SolutionGenerator {
 
     //___________________________________v2_CON_PROGRAMACION_DINAMICA___________________________________________________
 
-    // 1. Hay un problema grave, hasta ahora he supuesto que con el set de datos dado habria repeticion. Pero en el
+    // Hay un problema grave, hasta ahora he supuesto que con el set de datos dado habria repeticion. Pero en el
     // set de datos no hay repeticion porque siempre hay un bloque de cada tipo. Por tanto, a partir de "defaultBlocks"
     // hay que generar un multiconjunto con bloques repetidos. Primer planteamiento al problema con ejemplo:
     // "defaultBlocks":  ["advance","backwards","turnRight","turnLeft","action"]
@@ -190,14 +192,53 @@ public class SolutionGenerator {
     // int [] subsetDefaultBlocks = new Array(n).fill(0);
     // Como en solutionGenerator se pasa por parametro additionalKeyBlocks, los que pertenezcan a esa lista tendra que
     // haber uno como minimo. Si hay un bloque additionalKeyBlocks que no aparece en defaultBlocks, se añade al array y
-    // también tiene que haber uno como mínimo (Esto puede ocurrir con frecuencia con el bloque de bucles)
+    // también tiene que haber uno como mínimo (Esto puede ocurrir con frecuencia con el bloque de bucles for)
     // int newR = r - additionalKeyBlocks.length
     // for (let i = 0; i < newR; i++) {
     // numbers[Math.floor(Math.random() * newR) % (n - 1)]++;
     // }
-    // Con esta implementacion pasa a ser permutaciones con repetición
-    // https://www.wextensible.com/temas/recursivos/permutar.html
+    // Con esta implementacion deberia pasar a permutaciones con repeticion o
+    // permutaciones de los indices del array que podria ser mas sencillo (?)
 
     // 2. Para seguir adelante con el algoritmo habrá que tener en cuenta la teoria que hay en:
     // file:///E:/hlocal/MARP/DINAMICA/progdinamica.pdf y el ejemplo que hay en https://www.youtube.com/watch?v=2GEIvssFZRg
+
+    public void solutionGeneratorDP(ArrayList<String> defaultBlocks, int r, ArrayList<String> additionalKeyBlocks) {
+        if (defaultBlocks == null || defaultBlocks.size() == 0) {
+            return;
+        }
+        if (defaultBlocks.size() > r) {
+            // Hay que hacer combinaciones
+        } else if (defaultBlocks.size() < r) {
+            // Puede que haya algun bloque adicional que no este en defaultBlocks en algunas unidades, como esa lista de
+            // bloques va a ser muy pequeña (puede que en el peor caso sean 4 bloques), lo mas facil es hacerla del
+            // tamaño mayor para no modificarla de tamaño posteriormente
+            int[] subsetDefaultBlocks = new int[defaultBlocks.size() + additionalKeyBlocks.size()];
+            Arrays.fill(subsetDefaultBlocks, 0);
+            for (String keyBlock : additionalKeyBlocks) {
+                int index = defaultBlocks.indexOf(keyBlock);
+                if (index == -1) {
+                    defaultBlocks.add(keyBlock);
+                    index = defaultBlocks.size() - 1;
+                }
+                subsetDefaultBlocks[index]++;
+            }
+
+            int newR = r - additionalKeyBlocks.size();
+            for (int i = 0; i < newR; i++) {
+                subsetDefaultBlocks[(int) (Math.floor(Math.random() * newR) % (defaultBlocks.size() - 1))]++;
+            }
+            // Ahora hay que hacer el nuevo subconjunto en un array para poder trabajar con los indices para las permutaciones
+            String[] permutationArray = new String[r];
+            int index = 0;
+            for (int i = 0; i < defaultBlocks.size(); i++) {
+                for (int x = 0; x < subsetDefaultBlocks[i]; x++) {
+                    permutationArray[index] = defaultBlocks.get(i);
+                    index++;
+                }
+            }
+
+            // Ahora que tengo el set para la permutacion preparado
+        }
+    }
 }
