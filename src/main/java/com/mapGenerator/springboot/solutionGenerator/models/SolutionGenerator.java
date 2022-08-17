@@ -3,6 +3,7 @@ package com.mapGenerator.springboot.solutionGenerator.models;
 import java.sql.Array;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.stream.IntStream;
 
 public class SolutionGenerator {
     private ArrayList<ArrayList<String>> solutions; // soluciones diferentes, cada solucion es una lista de instrucciones
@@ -208,7 +209,7 @@ public class SolutionGenerator {
             return;
         }
         if (defaultBlocks.size() > r) {
-            // Hay que hacer combinaciones
+            // TODO: Hay que hacer combinaciones
         } else if (defaultBlocks.size() < r) {
             // Puede que haya algun bloque adicional que no este en defaultBlocks en algunas unidades, como esa lista de
             // bloques va a ser muy pequeña (puede que en el peor caso sean 4 bloques), lo mas facil es hacerla del
@@ -239,6 +240,35 @@ public class SolutionGenerator {
             }
 
             // Ahora que tengo el set para la permutacion preparado
+            int[] permutationIndexes = IntStream.rangeClosed(0, r).toArray();
+            int factorial = IntStream.rangeClosed(1, r).reduce(1, (int x, int y) -> x * y);
+            // Para la programacion dinamica en lugar de una matriz como es habitual en la mayoria de este tipo de
+            // problemas. Para mejorar la gestion del espacio utilizare dos listas de arrays que contengan la permutacion
+            // actual y la permutacion anterior
+
+            ArrayList<int[]> permutacionAnterior = new ArrayList<>(factorial);
+            ArrayList<int[]> permutacionActual = new ArrayList<>(factorial);
+            permutacionAnterior.add(new int[]{permutationIndexes[r - 1]});
+
+            for (int posActual = r - 1; posActual > 0; posActual--) {
+                // Al principio de la iteracion limpiamos la permutacion actual para calcular la nueva y luego se actualiza
+                // la previa
+                permutacionActual.clear();
+                for (int [] permutacion : permutacionAnterior) {
+                    permutacionActual.addAll(addPermutacion(permutacion, permutationIndexes[posActual]));
+                }
+                if(posActual - 1 > 0) {
+                    permutacionAnterior.clear();
+                    permutacionAnterior.addAll(permutacionActual);
+                }
+            }
+            // Una vez calculadas las permutaciones de los indices, se traduce de numero a string para tener los
+            // bloques. Despues habria que aplicar las reglas de las soluciones candidatas para descartar.
         }
+    }
+
+    private ArrayList<int[]> addPermutacion(int [] permutacion, int siguiente) {
+        ArrayList<int[]> permutacionActual = new ArrayList<>(permutacion.length + 1);
+        return  permutacionActual;
     }
 }

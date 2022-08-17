@@ -5,7 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="72c6da21-7a6f-4d72-a691-a55e4a61a731" name="Changes" comment="Error a corregir e información para mejorar el algoritmo a utilizando programación dinámica">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/mapGenerator/springboot/solutionGenerator/models/SolutionGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mapGenerator/springboot/solutionGenerator/models/SolutionGenerator.java" afterDir="false" />
     </list>
@@ -102,7 +101,7 @@
       </method>
     </configuration>
   </component>
-  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="SpellCheckerSettings" BundledDictionaries="0" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" Dictionaries="0" CorrectionsLimit="5" DefaultDictionary="application-level" UseSingleDictionary="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -138,6 +137,8 @@
       <workItem from="1658836762899" duration="976000" />
       <workItem from="1659007096580" duration="5206000" />
       <workItem from="1659133710250" duration="3522000" />
+      <workItem from="1660059358779" duration="1612000" />
+      <workItem from="1660757960142" duration="5428000" />
     </task>
     <task id="LOCAL-00001" summary="Planteamiento del algoritmo de generador de soluciones">
       <created>1647808319386</created>
@@ -199,14 +200,16 @@
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="3" />
+    <option name="version" value="1" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
@@ -221,6 +224,12 @@
     <MESSAGE value="Primera version del generador de soluciones realizada" />
     <MESSAGE value="Error a corregir e información para mejorar el algoritmo a utilizando programación dinámica" />
     <option name="LAST_COMMIT_MESSAGE" value="Error a corregir e información para mejorar el algoritmo a utilizando programación dinámica" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="454" y="134" key="CommitChangelistDialog2" timestamp="1660766929725">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="454" y="134" key="CommitChangelistDialog2/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1660766929725" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
