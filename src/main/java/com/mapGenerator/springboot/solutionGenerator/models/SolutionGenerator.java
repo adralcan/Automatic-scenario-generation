@@ -268,7 +268,17 @@ public class SolutionGenerator {
     }
 
     private ArrayList<int[]> addPermutacion(int [] permutacion, int siguiente) {
-        ArrayList<int[]> permutacionActual = new ArrayList<>(permutacion.length + 1);
-        return  permutacionActual;
+        ArrayList<int[]> permutaciones = new ArrayList<>(permutacion.length + 1);
+        for (int x = 0; x <  permutacion.length + 1; x++){
+            int[] permutacionNueva = new int[permutacion.length + 1];
+            int i = 0;
+            for (int j = 0; j < permutacion.length + 1; j++){
+                // Si los indices coinciden me quedo con el siguiente elemento a permutar como pivote y el resto es lo
+                // que voy cambiando para hacer la nueva permutacion
+                permutacionNueva[j] = (j == x)? siguiente : permutacion[i++];
+            }
+            permutaciones.add(permutacionNueva);
+        }
+        return  permutaciones;
     }
 }
