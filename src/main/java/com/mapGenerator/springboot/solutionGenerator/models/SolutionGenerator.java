@@ -3,6 +3,8 @@ package com.mapGenerator.springboot.solutionGenerator.models;
 import java.sql.Array;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.HashSet;
+import java.util.Set;
 import java.util.stream.IntStream;
 
 public class SolutionGenerator {
@@ -204,67 +206,81 @@ public class SolutionGenerator {
     // 2. Para seguir adelante con el algoritmo habrá que tener en cuenta la teoria que hay en:
     // file:///E:/hlocal/MARP/DINAMICA/progdinamica.pdf y el ejemplo que hay en https://www.youtube.com/watch?v=2GEIvssFZRg
 
-    public void solutionGeneratorDP(ArrayList<String> defaultBlocks, int r, ArrayList<String> additionalKeyBlocks) {
+    public ArrayList<String[]> solutionGeneratorDP(ArrayList<String> defaultBlocks, int r, ArrayList<String> additionalKeyBlocks) {
         if (defaultBlocks == null || defaultBlocks.size() == 0) {
-            return;
+            return new ArrayList<>();
         }
-        if (defaultBlocks.size() > r) {
+        Set<String> auxSet = new HashSet<>();
+        auxSet.addAll(defaultBlocks);
+        auxSet.addAll(additionalKeyBlocks);
+        ArrayList<String> newDefaultBlocks = new ArrayList<>(auxSet);
+
+        int[] subsetDefaultBlocks = new int[newDefaultBlocks.size()];
+        if (newDefaultBlocks.size() > r) {
             // TODO: Hay que hacer combinaciones
-        } else if (defaultBlocks.size() < r) {
-            // Puede que haya algun bloque adicional que no este en defaultBlocks en algunas unidades, como esa lista de
-            // bloques va a ser muy pequeña (puede que en el peor caso sean 4 bloques), lo mas facil es hacerla del
-            // tamaño mayor para no modificarla de tamaño posteriormente
-            int[] subsetDefaultBlocks = new int[defaultBlocks.size() + additionalKeyBlocks.size()];
+            return new ArrayList<>();
+        }
+        else if (newDefaultBlocks.size() < r) {
             Arrays.fill(subsetDefaultBlocks, 0);
             for (String keyBlock : additionalKeyBlocks) {
-                int index = defaultBlocks.indexOf(keyBlock);
-                if (index == -1) {
-                    defaultBlocks.add(keyBlock);
-                    index = defaultBlocks.size() - 1;
-                }
+                int index = newDefaultBlocks.indexOf(keyBlock);
                 subsetDefaultBlocks[index]++;
             }
 
             int newR = r - additionalKeyBlocks.size();
             for (int i = 0; i < newR; i++) {
-                subsetDefaultBlocks[(int) (Math.floor(Math.random() * newR) % (defaultBlocks.size() - 1))]++;
+                subsetDefaultBlocks[(int) (Math.floor(Math.random() * newR) % (newDefaultBlocks.size() - 1))]++;
             }
-            // Ahora hay que hacer el nuevo subconjunto en un array para poder trabajar con los indices para las permutaciones
-            String[] permutationArray = new String[r];
-            int index = 0;
-            for (int i = 0; i < defaultBlocks.size(); i++) {
-                for (int x = 0; x < subsetDefaultBlocks[i]; x++) {
-                    permutationArray[index] = defaultBlocks.get(i);
-                    index++;
-                }
-            }
-
-            // Ahora que tengo el set para la permutacion preparado
-            int[] permutationIndexes = IntStream.rangeClosed(0, r).toArray();
-            int factorial = IntStream.rangeClosed(1, r).reduce(1, (int x, int y) -> x * y);
-            // Para la programacion dinamica en lugar de una matriz como es habitual en la mayoria de este tipo de
-            // problemas. Para mejorar la gestion del espacio utilizare dos listas de arrays que contengan la permutacion
-            // actual y la permutacion anterior
-
-            ArrayList<int[]> permutacionAnterior = new ArrayList<>(factorial);
-            ArrayList<int[]> permutacionActual = new ArrayList<>(factorial);
-            permutacionAnterior.add(new int[]{permutationIndexes[r - 1]});
-
-            for (int posActual = r - 1; posActual > 0; posActual--) {
-                // Al principio de la iteracion limpiamos la permutacion actual para calcular la nueva y luego se actualiza
-                // la previa
-                permutacionActual.clear();
-                for (int [] permutacion : permutacionAnterior) {
-                    permutacionActual.addAll(addPermutacion(permutacion, permutationIndexes[posActual]));
-                }
-                if(posActual - 1 > 0) {
-                    permutacionAnterior.clear();
-                    permutacionAnterior.addAll(permutacionActual);
-                }
-            }
-            // Una vez calculadas las permutaciones de los indices, se traduce de numero a string para tener los
-            // bloques. Despues habria que aplicar las reglas de las soluciones candidatas para descartar.
         }
+        else {
+            Arrays.fill(subsetDefaultBlocks, 1);
+        }
+
+        // Ahora hay que hacer el nuevo subconjunto en un array para poder trabajar con los indices para las permutaciones
+        String[] permutationArray = new String[r];
+        int index = 0;
+        for (int i = 0; i < newDefaultBlocks.size(); i++) {
+            for (int x = 0; x < subsetDefaultBlocks[i]; x++) {
+                permutationArray[index] = defaultBlocks.get(i);
+                index++;
+            }
+        }
+
+        // Ahora que tengo el set para la permutacion preparado
+        int[] permutationIndexes = IntStream.rangeClosed(0, r).toArray();
+        int factorial = IntStream.rangeClosed(1, r).reduce(1, (int x, int y) -> x * y);
+        // Para la programacion dinamica en lugar de una matriz como es habitual en la mayoria de este tipo de
+        // problemas. Para mejorar la gestion del espacio utilizare dos listas de arrays que contengan la permutacion
+        // actual y la permutacion anterior
+
+        ArrayList<int[]> permutacionAnterior = new ArrayList<>(factorial);
+        ArrayList<int[]> permutacionActual = new ArrayList<>(factorial);
+        // Primera permutacion que es la lista ya ordenada
+        permutacionAnterior.add(new int[]{permutationIndexes[r - 1]});
+
+        for (int posActual = r - 1; posActual > 0; posActual--) {
+            // Al principio de la iteracion limpiamos la permutacion actual para calcular la nueva y luego se actualiza
+            // la previa
+            permutacionActual.clear();
+            for (int [] permutacion : permutacionAnterior) {
+                permutacionActual.addAll(addPermutacion(permutacion, permutationIndexes[posActual]));
+            }
+            if(posActual - 1 > 0) {
+                permutacionAnterior.clear();
+                permutacionAnterior.addAll(permutacionActual);
+            }
+        }
+        // Una vez calculadas las permutaciones de los indices, se traduce de numero a string para tener los
+        // bloques. Despues habria que aplicar las reglas de las soluciones candidatas para descartar.
+        ArrayList<String[]> solucionesPosibles = new ArrayList<>();
+        for (int [] permutacion : permutacionActual) {
+            String [] solucion = new String[r];
+            for (int i = 0; i < r; i++){
+                solucion[i] = permutationArray[permutacion[i]];
+            }
+            solucionesPosibles.add(solucion);
+        }
+        return solucionesPosibles;
     }
 
     private ArrayList<int[]> addPermutacion(int [] permutacion, int siguiente) {

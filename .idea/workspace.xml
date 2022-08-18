@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="72c6da21-7a6f-4d72-a691-a55e4a61a731" name="Changes" comment="Calculo de las permutaciones, algoritmo general. Implementar la creacion de la permutacion">
+    <list default="true" id="72c6da21-7a6f-4d72-a691-a55e4a61a731" name="Changes" comment="Calculo de las permutaciones">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/mapGenerator/springboot/solutionGenerator/models/SolutionGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mapGenerator/springboot/solutionGenerator/models/SolutionGenerator.java" afterDir="false" />
     </list>
@@ -147,7 +147,7 @@
       <workItem from="1659133710250" duration="3522000" />
       <workItem from="1660059358779" duration="1612000" />
       <workItem from="1660757960142" duration="6157000" />
-      <workItem from="1660837639819" duration="3198000" />
+      <workItem from="1660837639819" duration="8872000" />
     </task>
     <task id="LOCAL-00001" summary="Planteamiento del algoritmo de generador de soluciones">
       <created>1647808319386</created>
@@ -226,7 +226,14 @@
       <option name="project" value="LOCAL" />
       <updated>1660767700458</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Calculo de las permutaciones">
+      <created>1660841062760</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1660841062760</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -254,21 +261,22 @@
     <MESSAGE value="Primera version del generador de soluciones realizada" />
     <MESSAGE value="Error a corregir e información para mejorar el algoritmo a utilizando programación dinámica" />
     <MESSAGE value="Calculo de las permutaciones, algoritmo general. Implementar la creacion de la permutacion" />
-    <option name="LAST_COMMIT_MESSAGE" value="Calculo de las permutaciones, algoritmo general. Implementar la creacion de la permutacion" />
+    <MESSAGE value="Calculo de las permutaciones" />
+    <option name="LAST_COMMIT_MESSAGE" value="Calculo de las permutaciones" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="454" y="134" key="CommitChangelistDialog2" timestamp="1660767700047">
+    <state x="454" y="134" key="CommitChangelistDialog2" timestamp="1660841062151">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="454" y="134" key="CommitChangelistDialog2/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1660767700047" />
+    <state x="454" y="134" key="CommitChangelistDialog2/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1660841062151" />
     <state x="461" y="182" key="SettingsEditor" timestamp="1660767695955">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="461" y="182" key="SettingsEditor/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1660767695955" />
-    <state x="552" y="272" key="Vcs.Push.Dialog.v2" timestamp="1660767702267">
+    <state x="552" y="272" key="Vcs.Push.Dialog.v2" timestamp="1660841064543">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="552" y="272" key="Vcs.Push.Dialog.v2/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1660767702267" />
+    <state x="552" y="272" key="Vcs.Push.Dialog.v2/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1660841064543" />
     <state x="769" y="456" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1660767481525">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
