@@ -148,6 +148,7 @@
       <workItem from="1660059358779" duration="1612000" />
       <workItem from="1660757960142" duration="6157000" />
       <workItem from="1660837639819" duration="8872000" />
+      <workItem from="1660927683482" duration="6003000" />
     </task>
     <task id="LOCAL-00001" summary="Planteamiento del algoritmo de generador de soluciones">
       <created>1647808319386</created>
@@ -265,18 +266,18 @@
     <option name="LAST_COMMIT_MESSAGE" value="Calculo de las permutaciones" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="454" y="134" key="CommitChangelistDialog2" timestamp="1660841062151">
+    <state x="454" y="134" key="CommitChangelistDialog2" timestamp="1660849016433">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="454" y="134" key="CommitChangelistDialog2/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1660841062151" />
+    <state x="454" y="134" key="CommitChangelistDialog2/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1660849016433" />
     <state x="461" y="182" key="SettingsEditor" timestamp="1660767695955">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="461" y="182" key="SettingsEditor/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1660767695955" />
-    <state x="552" y="272" key="Vcs.Push.Dialog.v2" timestamp="1660841064543">
+    <state x="552" y="272" key="Vcs.Push.Dialog.v2" timestamp="1660849018251">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="552" y="272" key="Vcs.Push.Dialog.v2/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1660841064543" />
+    <state x="552" y="272" key="Vcs.Push.Dialog.v2/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1660849018251" />
     <state x="769" y="456" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1660767481525">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>

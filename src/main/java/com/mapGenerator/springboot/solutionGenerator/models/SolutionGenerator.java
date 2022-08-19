@@ -8,7 +8,6 @@ import java.util.Set;
 import java.util.stream.IntStream;
 
 public class SolutionGenerator {
-    private ArrayList<ArrayList<String>> solutions; // soluciones diferentes, cada solucion es una lista de instrucciones
 
 
     // Las instrucciones disponibles estaran definidas por la unidad a la que pertenezcan.
@@ -38,30 +37,30 @@ public class SolutionGenerator {
     // tempIndex: indices de la combinacion que se esta formando
     // r: tamaño de la combinación que se va a generar
     // start & end:
-    public static void candidateSolutionGenerator(ArrayList<ArrayList<String>> candidateSolutions,
+    public static void combinacionesGenerador(ArrayList<ArrayList<String>> combinaciones,
                                                   ArrayList<String> defaultBlocks,
-                                                  int[] tempIndex, int index, int r, int start, int end) {
+                                                  int[] tempIndex, int index, int r, int ini, int fin) {
         // https://www.geeksforgeeks.org/combinations-with-repetitions/
 
         // Cuando el indice se convierte en el limite, es que se puede guardar la solucion
         if (index == r) {
-            ArrayList<String> candidateSolution = new ArrayList<>();
+            ArrayList<String> combinacion = new ArrayList<>();
             for (int i : tempIndex) {
-                candidateSolution.add(defaultBlocks.get(i));
+                combinacion.add(defaultBlocks.get(i));
             }
-            candidateSolutions.add(candidateSolution);
+            combinaciones.add(combinacion);
         } else {
             // Elegir todos los elementos posibles de uno en uno. Como se puede repetir no se tiene en cuenta si ha sido
             // elegido ya. Se procede a la recurrencia.
-            for (int i = start; i <= end; i++) {
+            for (int i = ini; i <= fin; i++) {
                 tempIndex[index] = i;
-                candidateSolutionGenerator(candidateSolutions, defaultBlocks, tempIndex, index + 1, r, i, end);
+                combinacionesGenerador(combinaciones, defaultBlocks, tempIndex, index + 1, r, i, fin);
             }
         }
     }
 
     static void combNonCandidate(ArrayList<ArrayList<Integer>> combinations, int[] arr, int[] tempIndex,
-                                 int index, int r, int start, int end) {
+                                 int index, int r, int ini, int fin) {
         if (index == r) {
             ArrayList<Integer> combination = new ArrayList<>();
             for (int i = 0; i < r; i++) {
@@ -69,10 +68,10 @@ public class SolutionGenerator {
             }
             combinations.add(combination);
         } else {
-            for (int i = start; i <= end; i++) {
+            for (int i = ini; i <= fin; i++) {
                 tempIndex[index] = i;
                 combNonCandidate(combinations, arr, tempIndex, index + 1,
-                        r, i, end);
+                        r, i, fin);
             }
         }
     }
@@ -98,32 +97,28 @@ public class SolutionGenerator {
     //AATT ATTA TTAA ATAT TATA
     //3º caso
     // n > r: de momento lo dejamos hasta que sea un problema
-    public static void buildCombination(ArrayList<ArrayList<String>> candidateSolutions, ArrayList<String> defaultBlocks, int r) {
+    public static void buildCombination(ArrayList<ArrayList<String>> combinaciones, ArrayList<String> defaultBlocks, int r) {
         ArrayList<String> newSetDefaultBlocks = defaultBlocks;
         for (int i = 0; i < defaultBlocks.size(); i++) {
             while (newSetDefaultBlocks.size() < r) {
                 newSetDefaultBlocks.add(defaultBlocks.get(i));
             }
             int[] tempIndex = new int[r + 1];
-            candidateSolutionGenerator(candidateSolutions, newSetDefaultBlocks, tempIndex, 0, r, 0, newSetDefaultBlocks.size() - 1);
+            combinacionesGenerador(combinaciones, newSetDefaultBlocks, tempIndex, 0, r, 0, newSetDefaultBlocks.size() - 1);
             newSetDefaultBlocks = defaultBlocks;
         }
     }
 
     // defaultBlocks: instrucciones por defecto en la unidad
     // r: tamaño de la combinación que se va a generar
-    public void solutionGenerator(ArrayList<String> defaultBlocks, int r, ArrayList<String> additionalKeyBlocks) {
+    public ArrayList<String[]> solucionCombinacionesGenerador(ArrayList<String> defaultBlocks, int r, ArrayList<String> additionalKeyBlocks) {
         // (?) r deberia pasar a la solucion parcial con su propio valor o se divide en partes para creaar subsoluciones
 
         // IMPORTANTE: que pasa si defaultBlocks.size() es mayor que r
 
-        ArrayList<ArrayList<String>> candidateSolutions = new ArrayList<>();
+        ArrayList<ArrayList<String>> combinaciones = new ArrayList<>();
         int[] tempIndex = new int[r + 1];
-        if (defaultBlocks.size() < r) {
-            buildCombination(candidateSolutions, defaultBlocks, r);
-        } else {
-            candidateSolutionGenerator(candidateSolutions, defaultBlocks, tempIndex, 0, r, 0, defaultBlocks.size() - 1);
-        }
+        combinacionesGenerador(combinaciones, defaultBlocks, tempIndex, 0, r, 0, defaultBlocks.size() - 1);
         // Ahora tengo las soluciones sin filtrar
         // Separar las que son candidatas por si mismas del resto
         // Para que sea candidata debe cumplir los requisitos
@@ -134,46 +129,46 @@ public class SolutionGenerator {
         // ^ Esta todavía no se mete en SolutionGeneratorRules porque puede haber teletransportes
         // Se puede meter como regla o se puede poner un teleport
         ArrayList<ArrayList<String>> discardedSolutions = new ArrayList<>();
-        for (ArrayList<String> candidateSolution : candidateSolutions) {
-            if (!isCandidate(candidateSolution, additionalKeyBlocks)) {
-                discardedSolutions.add(candidateSolution);
-            } else {
-                solutions.add(candidateSolution);
+        ArrayList<String[]> combinacionesFiltradas = new ArrayList<>();
+        for (ArrayList<String> combinacion : combinaciones) {
+            if (isCandidate(combinacion, additionalKeyBlocks)) {
+                combinacionesFiltradas.add((String[]) combinacion.toArray());
             }
         }
-        // Reciclaje de soluciones descartadas
-        tempIndex = new int[2];
-        int[] arr = new int[discardedSolutions.size()];
-        ArrayList<ArrayList<Integer>> newCandidates = new ArrayList<>();
-        combNonCandidate(newCandidates, tempIndex, arr, 0, r, 0, defaultBlocks.size() - 1);
-        for (ArrayList<Integer> newCandidate : newCandidates) {
-            ArrayList<String> candidate = new ArrayList<>();
-            for (Integer index : newCandidate) {
-                candidate.addAll(discardedSolutions.get(index));
-            }
-            if (isCandidate(candidate, additionalKeyBlocks)) {
-                solutions.add(candidate);
-            }
-        }
+        return combinacionesFiltradas;
+//        // Reciclaje de soluciones descartadas
+//        tempIndex = new int[2];
+//        int[] arr = new int[discardedSolutions.size()];
+//        ArrayList<ArrayList<Integer>> newCandidates = new ArrayList<>();
+//        combNonCandidate(newCandidates, tempIndex, arr, 0, r, 0, defaultBlocks.size() - 1);
+//        for (ArrayList<Integer> newCandidate : newCandidates) {
+//            ArrayList<String> candidate = new ArrayList<>();
+//            for (Integer index : newCandidate) {
+//                candidate.addAll(discardedSolutions.get(index));
+//            }
+//            if (isCandidate(candidate, additionalKeyBlocks)) {
+//                solutions.add(candidate);
+//            }
+//        }
     }
 
-    static boolean isCandidate(ArrayList<String> candidateSolution, ArrayList<String> additionalKeyBlocks) {
+    static boolean isCandidate(ArrayList<String> combinacion, ArrayList<String> additionalKeyBlocks) {
         String[] keyBlocks = new String[]{"advance", "backwards"};
         if (additionalKeyBlocks != null) {
             System.arraycopy(additionalKeyBlocks.toArray(), 0, keyBlocks, 0, additionalKeyBlocks.size());
         }
-        int[] keBlocksReps = SolutionGeneratorRules.leastOneKeyBlock(keyBlocks, candidateSolution);
+        int[] keBlocksReps = SolutionGeneratorRules.leastOneKeyBlock(keyBlocks, combinacion);
         for (int reps : keBlocksReps) {
             if (reps < 1) {
                 return false;
             }
         }
-        int prevSize = candidateSolution.size();
-        SolutionGeneratorRules.simplifyTurns(candidateSolution);
-        if (candidateSolution.size() != prevSize) {
+        int prevSize = combinacion.size();
+        SolutionGeneratorRules.simplifyTurns(combinacion);
+        if (combinacion.size() != prevSize) {
             return false;
         }
-        if (!SolutionGeneratorRules.lastBlock(candidateSolution)) {
+        if (!SolutionGeneratorRules.lastBlock(combinacion)) {
             return false;
         }
         return true;
@@ -217,8 +212,9 @@ public class SolutionGenerator {
 
         int[] subsetDefaultBlocks = new int[newDefaultBlocks.size()];
         if (newDefaultBlocks.size() > r) {
-            // TODO: Hay que hacer combinaciones
-            return new ArrayList<>();
+            // Se prodia hacer con programacion dinamica pero hay muy pocas ocasiones en las que se generen soluciones
+            // mas pequeñas que el set de datos. Ademas serian pocas combinaciones en total.
+            return solucionCombinacionesGenerador(newDefaultBlocks, r, additionalKeyBlocks);
         }
         else if (newDefaultBlocks.size() < r) {
             Arrays.fill(subsetDefaultBlocks, 0);
